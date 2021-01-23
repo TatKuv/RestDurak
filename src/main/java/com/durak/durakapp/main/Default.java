@@ -12,7 +12,7 @@ public class Default {
         return (new Date()).toString();
     }
 
-    @RequestMapping("/ok")
+    @RequestMapping("/")
 
     public String ok() {
         return ("Hello World");

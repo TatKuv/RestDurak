@@ -1,10 +1,10 @@
-package com.durak.durakapp.response;
+package response;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class Cards {
+public class Card {
     private String masti;
     private String name;
     private int rank;

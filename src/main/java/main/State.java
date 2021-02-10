@@ -1,6 +1,6 @@
 package main;
 
-import response.Card;
+import main.Card;
 import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -18,9 +18,7 @@ public class State {
     //     cards.put(card);    Не надо создавать метод, который уже есть 
     //     return cards;
     // }
-
-    
-    
+      
 }
 
 

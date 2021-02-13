@@ -23,12 +23,12 @@ public class CardsController {
     @PostMapping(value = "/c", consumes = { MediaType.APPLICATION_JSON_VALUE }, produces = {
             MediaType.APPLICATION_JSON_VALUE })
 
-    public ResponseEntity ArrayList(@RequestBody ParamsFromFront paramsFromFront) {
+    public ResponseEntity ArrayList(@RequestBody HashMap <String,String> paramsFromFront) {
         // return "paramsFromFront";
-        if (paramsFromFront.getMethod().equals("start_game")) {            
-            return new ResponseEntity(GamePlay.startGame(), HttpStatus.OK);
+        if (paramsFromFront.get("method").equals("start_game")) {            
+            return new ResponseEntity(GamePlay.startGame(paramsToFront), HttpStatus.OK);
         }
-        else if (paramsFromFront.getMethod().equals("step") && GamePlay.isSameCard(paramsFromFront,paramsToFront)){
+        else if (paramsFromFront.get("method").equals("step") && GamePlay.isSameId(paramsToFront, paramsFromFront)) {
             
         }
         return null;
